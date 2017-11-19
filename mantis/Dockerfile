@@ -6,4 +6,4 @@ RUN apk update && apk add \
         libmcrypt-dev \
         # php-soap
         libxml2-dev \
-    && docker-php-ext-install -j$(nproc) iconv mcrypt mysqli soap
+    && docker-php-ext-install -j$(nproc) mcrypt mysqli soap
