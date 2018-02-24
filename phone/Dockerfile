@@ -5,5 +5,5 @@ RUN apk update && apk add \
         # php-mcrypt
         libmcrypt-dev \
         # php xml
-        libxml2 \
+        libxml2-dev \
     && docker-php-ext-install -j$(nproc) mysqli mbstring xml
