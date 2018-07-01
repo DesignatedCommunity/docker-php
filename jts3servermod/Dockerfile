@@ -1,7 +1,5 @@
-FROM php:7.1-fpm-alpine
-RUN apk update && apk add \
+FROM php:7.2-fpm-alpine
+RUN apk add --no-cache \
         # nproc
         coreutils \
-        # php-mcrypt
-        libmcrypt-dev \
-    && docker-php-ext-install -j$(nproc) mcrypt mysqli
+    && docker-php-ext-install -j$(nproc) mysqli
